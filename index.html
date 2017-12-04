@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>qiuqiu_front_web</title>
-  </head>
-  <body>
+    <title>QiuQiu</title>
+    <style>
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #app {
+            height: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+        if (!window.console) {
+            var names = ["log", "debug", "info", "warn", "error", "assert", "dir", "dirxml", "group", "groupEnd", "time", "timeEnd", "count", "trace", "profile", "profileEnd"];
+            window.console = {};
+            for (var i = 0; i < names.length; ++i)
+                window.console[names[i]] = function() {}
+        }
+    </script>
+</head>
+
+<body style="margin: 0px">
     <div id="app"></div>
     <!-- built files will be auto injected -->
-  </body>
+</body>
+
 </html>
