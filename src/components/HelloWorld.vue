@@ -1,6 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="head">
     <h1>{{ msg }}</h1>
+    <textarea rows="1" ></textarea>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -31,8 +32,10 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.head{
+  background: url(../res/img/home_bg.png);
+}
 h1, h2 {
   font-weight: normal;
 }
