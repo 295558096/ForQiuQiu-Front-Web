@@ -29,11 +29,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/du':{
+      '/QiuQiu':{
         target:'http://172.18.72.41:8080',
         secure:false,
         pathRewrite:{
-          '^/du':'/du'
+          '^/QiuQiu':'/QiuQiu'
         }
       }
     },

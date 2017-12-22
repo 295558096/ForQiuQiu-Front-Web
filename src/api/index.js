@@ -16,7 +16,6 @@ axios.interceptors.response.use(function (response) {
       return
     default:
   }
-
   return response
 }, function (error) {
   // Do something with response error
@@ -33,7 +32,7 @@ axios.interceptors.response.use(function (response) {
 // axios(config)
 export default {
   // get 请求
-  get(url, params) {
+  get (url, params) {
     return axios.get(url, params)
   },
   // post 请求

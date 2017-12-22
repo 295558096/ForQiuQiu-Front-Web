@@ -1,7 +1,7 @@
 
 module.exports = {
-  baseUrl: '/du',
-  baseApiUrl: '/du/api',
-  appKey: 'com.thunisoft.du.client.browser'
+  baseUrl: '/QiuQiu',
+  baseApiUrl: '/QiuQiu/api',
+  appKey: 'com.zjl.QiuQiu.client.browser'
 }
 
