@@ -1,7 +1,7 @@
 <template>
   <div id="web_bg" class="main-bg">
     <img class="auto-bg" src="../res/img/home_bg.png" />
-    <div class="account-div">
+    <div class="account-div" style="display=none">
       <div>
         <h1 class="h1-account">账号：</h1>
         <el-input v-model="userAccount" class="user-account" ></el-input>
@@ -30,17 +30,28 @@ export default {
   methods: {
     login () {
       console.log('-------getData')
-      let that = this
+      // let that = this
       // 192.168.1.101为后端IP地址
       api.post({
         apiKey: '0001',
         v: '1',
-        id: '295558096'
+        userAccount: this.userAccount,
+        password: this.password
       })
       .then(function (response) {
         console.log(response)
         console.log(this)
-        that.serverData = response.data
+        if (response.data.code === '0000' && response.data.data.result === 'success') {
+          window.app.$message({
+            message: '登录成功',
+            type: 'success'
+          })
+        } else {
+          window.app.$message({
+            message: '登录失败',
+            type: 'error'
+          })
+        }
       })
       .catch(function (error) {
         console.log(error)
@@ -77,7 +88,7 @@ export default {
   z-index: 1;
     position: relative;
     width: 25%;
-    bottom: 40%;
+    bottom: 80%;
     left: 60%;
     border: 2px solid white;
     border-radius: 5px;
@@ -85,6 +96,7 @@ export default {
 .auto-bg {
   z-index: -1;
   width: 100%;
+  height: 99%;
   src: "../res/img/home_bg.png";
 }
 .login-button {
